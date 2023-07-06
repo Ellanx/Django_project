@@ -480,7 +480,7 @@
 
     </div>
     <script>
-        
+    /* modal */    
         $('#add_box').click(function(){
             $('.modal_overlay').css({
                 display: 'flex'           
@@ -523,7 +523,7 @@
 
         files = e.dataTransfer.files;
         if (files.length > 1) {
-            alert('하나만 올려라.');
+            alert('하나만 가능합니다.');
             return;
         }
 
@@ -547,7 +547,17 @@
             alert('이미지가 아닙니다.');
             return;
                     }
+            
+            $(".close_modal").click(function () {
+            $('#modal_add_feed').css({
+                display: 'none'
+            });
+            $('#modal_add_feed_content').css({
+                display: 'none'
+            });
+    });
     };
+    /* end modal */
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
