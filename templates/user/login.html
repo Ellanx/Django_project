@@ -4,7 +4,6 @@
 <h1>로그인</h1>
 <form method="post" action="{% url 'users:login' %}">
     {% csrf_token %}
-    {% include 'users/form_errors.html' %}
     <div>
         <label>사용자 ID</label>
         <input type="text" name="username" id="username">
